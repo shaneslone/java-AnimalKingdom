@@ -81,5 +81,11 @@ public class Main
 	    filteredList = filterAnimals(animalList, a -> a.getYearNamed() == 1758);
 	    filteredList.sort((a1, a2) -> a1.getName().compareToIgnoreCase(a2.getName()));
 		filteredList.forEach(a -> System.out.println(a));
+
+		System.out.println();
+		System.out.println("*** List alphabetically those animals that are mammals ***");
+	    filteredList = filterAnimals(animalList, a -> a instanceof Mammal);
+	    filteredList.sort((a1, a2) -> a1.getName().compareToIgnoreCase(a2.getName()));
+		filteredList.forEach(a -> System.out.println(a));
 	}
 }
